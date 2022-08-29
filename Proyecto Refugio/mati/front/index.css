@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    background-color: rgb(255, 200, 100);
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 35px;
+    border-radius: 30px;
+    border: 1.5px;
+    box-shadow: 1px 1px 20px rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 230, 100);
+}
+
+button:hover{
+    background-color: rgb(255, 200, 100);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(255, 200, 70);
+    background-image: url(pics/logo-nav.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 25vh;
+}
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: black;
+    font-size: 5em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .nav{
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 3px 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+header a:hover{
+    color: rgb(255, 255, 255);
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(pics/logo-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#about-us .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#info .container{
+    text-align: center;
+    padding: 100px 0px;
+}
+
+#info p{
+    display: inline-block;
+}
+
+#info h3{
+    margin-top: 0;
+    font-size: 4.5em;
+}
+
+#info .card{
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+#info button:hover{
+    background-color: rgb(255, 200, 100);
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.card:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(pics/first-child.jpg);
+    background-position: center 538px;
+    background-size: cover;
+}
+
+.card:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(pics/second-child.jpg);
+    background-position: center 538px;
+    background-size: cover;
+}
+
+footer{
+    background-color: rgb(255, 200, 70);
+}
+
+footer p{
+    margin: 0;
+    color: rgb(127, 127, 127);
+}
+
+footer li{
+    margin: 15px 0px;
+    font-weight: normal;
+    color: rgb(127, 127, 127);
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: rgb(127, 127, 127);
+}
+
+
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #about-us .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #about-us .text{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        padding: 0px 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #about-us h2{
+        margin-top: 0px;
+    }
+
+    #about-us .img-container{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0),
+            rgba(0,0,0,0)
+        ), url(pics/logo-nav.png);
+        background-size: cover;
+        background-position: center center;
+        height: 1000px;
+        width: 1000px;
+    }
+
+    #info .fotos{
+        display: flex;
+        justify-content: center;
+    }
+
+    #info p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #info h3{
+        margin-top: 0;
+    }
+
+    #info .card{
+        padding: 50px;
+    }
+}   
+
+@media (min-width: 1100px){
+    #info{
+        background-position-x: calc(100vw - 800px);
+    }
+}
